@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="styles/profile.css">
         <link rel="stylesheet" href="styles/profile2.css">
         <link rel="stylesheet" href="styles/scrollbtn.css">
-        <link rel="stylesheet" href="styles/media.css">
 
         <script src="https://www.w3schools.com/lib/w3data.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -32,6 +31,7 @@
     </noscript>
 
     <body>
+    
         <canvas id="rainCanvas" style="display: block; position: fixed; z-index: 1; top: 0; left: 0;"></canvas>
         <div id="container">
             <div id="headerObj"> <!-- Header Logo -->
@@ -81,34 +81,13 @@
                         <div style="display: none;" id="jsFormulaDIV" w3-include-html="pages/jsFormula.html"></div>
                         <div style="display: none;" id="jsGameDIV" w3-include-html="pages/.html"></div>
                     </main>
-                    
-                </div>
-                
-            </div>
-            <div id="footer">
-                <div class="container">
-                    <div class="wrapper_footer">
-                        <div id="buttonsLeft">
-                            <img id="webbutton" src="./assets/webbuttons/88x31-micro-button.gif">
-                            <img id="webbutton" src="./assets/webbuttons/mY3u0hA.gif">
-                            <img id="webbutton" src="./assets/webbuttons/linux_now.gif">
-                            <img id="webbutton" src="./assets/webbuttons/penguin.gif">
-                        </div>
-                        <div id="footerText">
-                            <h3>2024 © IlyaBOT. Все права защищены.</h3>
-                        </div>
-                        <div id="buttonsRight">
-                            <img id="webbutton" src="./assets/webbuttons/lainchan-button.png">
-                            <img id="webbutton" src="./assets/webbuttons/konata.gif">
-                            <img id="webbutton" src="./assets/webbuttons/reality.gif">
-                            <img id="webbutton" src="./assets/webbuttons/telegram.gif">
-                        </div>
-                    </div>
                 </div>
             </div>
-             <!--Footer-->
-            </div>
-        
+
+            <div w3-include-html="footer.html"></div> <!--Footer-->
+        </div>
+
+        <!-- THIS SHITTLY THING DOES NOT WORK!!! -->
         
         
 
