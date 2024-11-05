@@ -247,8 +247,10 @@ body {
 }
 
 #container{
+  position: relative;
   width: 80%;
   margin: auto;
+  z-index: 10;
 }
 
 .container {

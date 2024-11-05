@@ -21,6 +21,7 @@
         <script type="text/javascript" src="scripts/navBtnHandler.js"></script>
         <script type="text/javascript" src="scripts/pageHandler.js"></script>
         <script type="text/javascript" src="scripts/scrollbtn.js"></script>
+         
     </head>
 
     <noscript>
@@ -32,6 +33,8 @@
     </noscript>
 
     <body>
+    
+        <canvas id="rainCanvas" style="display: block; position: fixed; z-index: 1; top: 0; left: 0;"></canvas>
         <div id="container">
             <div id="headerObj"> <!-- Header Logo -->
                 <div class="header rise" style="display: inline;">IlyaBOT.</div>
@@ -87,11 +90,11 @@
         </div>
 
         <!-- THIS SHITTLY THING DOES NOT WORK!!! -->
-        <script type="text/javascript" src="scripts/rain.js"></script> 
-        <section class="rain"></section>
+        
+        
 
         <div class="bc1"></div> <!-- Background -->
-
+        <script type="text/javascript" src="scripts/rain.js"></script>
         <script>
             w3IncludeHTML();
         </script>
