@@ -298,10 +298,11 @@ create styles for #leftSidebar and #rightSidebar */
 
 #footerText{
   display: flex;
-
+  align-items: center;
   font-size: 28px;
   font-stretch: extra-expanded;
   font-weight: 400;
+  justify-content: center;
 }
 
 #buttonsLeft{
@@ -329,6 +330,7 @@ create styles for #leftSidebar and #rightSidebar */
     drop-shadow(0 0 0.5rem #a200ff69)
     drop-shadow(0 0 0.1rem #8400ff9f);
   margin: 8px;
+  max-width: 100%;
 }
 
 .mainBody {
@@ -417,6 +419,7 @@ ul li a {
   height: 100%;
   mix-blend-mode: exclusion;
   filter: hue-rotate(-69deg) saturate(0.5);
+  z-index: 12;
 }
 
 .pointer{
@@ -493,3 +496,5 @@ ul li a {
 		text-shadow: 0 0.02em #fff, 0.02em 0 #fff, -0.02em 0 #fff, 0 -0.02em #fff;
 	}
 }
+
+
