@@ -17,4 +17,83 @@
     #footerText{
         font-size: 12px;
     }
+
+    ul li a {
+      position: relative;
+      display: block;
+      text-align: center;
+      line-height: 64px;
+      font-size: 16px;
+      color: #666;
+      transition: 0.35s;
+    }
+
+    ul li {
+      list-style: none;
+      margin: 0 10px;
+    }
+
+    #navbar li {
+      padding-top: 0px;
+      padding-left: 10px;
+    }
+
+    .innerhome {
+      padding: 12px;
+    }
+
+    #container a {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    p{
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    h1{
+      font-size: 2em;
+      font-weight: 600;
+      font-weight: bold;
+      unicode-bidi: isolate;
+    }
+    h2{
+      font-size: 1.5em;
+      font-weight: 500;
+      font-weight: bold;
+      unicode-bidi: isolate;
+    }
+    h3{
+      font-size: 1.17em;
+      font-weight: 450;
+      font-weight: bold;
+      unicode-bidi: isolate;
+    }
+    h4{
+      font-size: 1em;
+      font-weight: 400;
+      font-weight: bold;
+      unicode-bidi: isolate;
+    }
+    h5{
+      font-size: 0.83em;
+      font-weight: 400;
+      font-weight: bold;
+      unicode-bidi: isolate;
+    }
+    h6{
+      font-size: 0.67em;
+      font-weight: 300;
+      font-weight: bold;
+      unicode-bidi: isolate;
+    }
+
+    body{
+      font-family: "Oswald", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 350;
+      font-size: 16px;
+      font-style: normal;
+    }
 }
