@@ -13,10 +13,39 @@
   }
 }
 
+@media (max-width: 1024px){
+  ul li {
+    list-style: none;
+    margin: 0px;
+    font-size: 0.65em;
+  }
+
+
+}
+
 @media (max-width: 707px) {
     #footerText{
         font-size: 12px;
     }
+
+    #mainDIV{
+      width: 100%;
+      max-width: 100%;
+      line-height: 1.1;
+    }
+
+    #headerObj {
+      margin: 10px auto 15px auto;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+      font-size: 32px;
+   }
+
+   .headerWord2{
+    margin-left: -7px;
+  }
 
     ul li a {
       position: relative;
@@ -30,7 +59,16 @@
 
     ul li {
       list-style: none;
-      margin: 0 10px;
+      margin: 0px;
+      text-wrap: auto;
+      word-break: break-word;
+      font-size: 0.5em;
+    }
+
+    .underConstruction {
+      font-size: 0.75em;
+      font-weight: 400;
+      text-align: center;
     }
 
     #navbar li {

@@ -180,6 +180,9 @@ body {
           user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome, Edge, Opera and Firefox */
 }
+.headerWord2{
+  margin-left: -12px;
+}
 #headerOverlay {
   position: overlay;
   /*height: 180px; */
@@ -404,8 +407,14 @@ ul li a {
   transition: 0.35s;
 }
 
+.underConstruction {
+  font-size: 1.2em;
+  font-weight: 450;
+  text-align: center;
+}
+
 #todoList{
-  padding: 2px;
+  padding: 4px;
 }
 
 .bc1 {
