@@ -17,121 +17,151 @@
   ul li {
     list-style: none;
     margin: 0px;
-    font-size: 0.65em;
+    font-size: 0.9em;
   }
 
+  .avatarAutoSizeInner {
+    position: relative;
+    width: 128px;
+    height: 128px;
+  }
 
+  .todoListLabel{
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 300;
+  }
 }
 
 @media (max-width: 707px) {
-    #footerText{
-        font-size: 12px;
-    }
+  p{
+    font-size: 18px;
+    font-weight: 400;
+  }
 
-    #mainDIV{
-      width: 100%;
-      max-width: 100%;
-      line-height: 1.1;
-    }
+  h1{
+    font-size: 2em;
+    font-weight: 600;
+    font-weight: bold;
+    unicode-bidi: isolate;
+  }
 
-    #headerObj {
-      margin: 10px auto 15px auto;
-      position: relative;
-      width: 100%;
-      text-align: center;
-      font-weight: 600;
-      font-size: 32px;
-   }
+  h2{
+    font-size: 1.5em;
+    font-weight: 500;
+    font-weight: bold;
+    unicode-bidi: isolate;
+  }
 
-   .headerWord2{
+  h3{
+    font-size: 1.17em;
+    font-weight: 450;
+    font-weight: bold;
+    unicode-bidi: isolate;
+  }
+
+  h4{
+    font-size: 1em;
+    font-weight: 400;
+    font-weight: bold;
+    unicode-bidi: isolate;
+  }
+
+  h5{
+    font-size: 0.83em;
+    font-weight: 400;
+    font-weight: bold;
+    unicode-bidi: isolate;
+  }
+
+  h6{
+    font-size: 0.67em;
+    font-weight: 300;
+    font-weight: bold;
+    unicode-bidi: isolate;
+  }
+
+  body{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-size: 16px;
+    font-style: normal;
+  }
+
+  #container {
+    width: 97%;
+  }
+
+  #footerText{
+      font-size: 12px;
+  }
+
+  #mainDIV{
+    width: 100%;
+    max-width: 100%;
+    line-height: 1.1;
+  }
+
+  #headerObj {
+    margin: 10px auto 15px auto;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 32px;
+  }
+
+  .headerWord2{
     margin-left: -7px;
   }
 
-    ul li a {
-      position: relative;
-      display: block;
-      text-align: center;
-      line-height: 64px;
-      font-size: 16px;
-      color: #666;
-      transition: 0.35s;
-    }
+  .avatarAutoSizeInner {
+    position: relative;
+    width: 96px;
+    height: 96px;
+  }
 
-    ul li {
-      list-style: none;
-      margin: 0px;
-      text-wrap: auto;
-      word-break: break-word;
-      font-size: 0.5em;
-    }
+  ul li a {
+    position: relative;
+    display: block;
+    text-align: center;
+    line-height: 64px;
+    font-size: 16px;
+    transition: 0.35s;
+  }
 
-    .underConstruction {
-      font-size: 0.75em;
-      font-weight: 400;
-      text-align: center;
-    }
+  ul li {
+    list-style: none;
+    margin: 0px;
+    text-wrap: auto;
+    word-break: break-word;
+    font-size: 0.5em;
+  }
 
-    #navbar li {
-      padding-top: 0px;
-      padding-left: 10px;
-    }
+  #todoListLabel{
+    font-style: italic;
+    font-size: 0.2em;
+    font-weight: 300;
+  }
 
-    .innerhome {
-      padding: 12px;
-    }
+  .underConstruction {
+    font-size: 0.75em;
+    font-weight: 400;
+    text-align: center;
+  }
 
-    #container a {
-      font-size: 18px;
-      font-weight: 400;
-    }
+  #navbar li {
+    padding-top: 0px;
+    padding-left: 10px;
+  }
 
-    p{
-      font-size: 18px;
-      font-weight: 400;
-    }
+  .innerhome {
+    padding: 12px;
+  }
 
-    h1{
-      font-size: 2em;
-      font-weight: 600;
-      font-weight: bold;
-      unicode-bidi: isolate;
-    }
-    h2{
-      font-size: 1.5em;
-      font-weight: 500;
-      font-weight: bold;
-      unicode-bidi: isolate;
-    }
-    h3{
-      font-size: 1.17em;
-      font-weight: 450;
-      font-weight: bold;
-      unicode-bidi: isolate;
-    }
-    h4{
-      font-size: 1em;
-      font-weight: 400;
-      font-weight: bold;
-      unicode-bidi: isolate;
-    }
-    h5{
-      font-size: 0.83em;
-      font-weight: 400;
-      font-weight: bold;
-      unicode-bidi: isolate;
-    }
-    h6{
-      font-size: 0.67em;
-      font-weight: 300;
-      font-weight: bold;
-      unicode-bidi: isolate;
-    }
-
-    body{
-      font-family: "Oswald", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 350;
-      font-size: 16px;
-      font-style: normal;
-    }
+  #container a {
+    font-size: 18px;
+    font-weight: 400;
+  }
 }

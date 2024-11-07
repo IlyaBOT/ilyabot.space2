@@ -584,9 +584,9 @@ body.profile_page.flat_page #footer_spacer {
 .profile_header_bg {
 	position: relative;
 	max-width: 1018px;
-	min-height: 224px;
+	/* min-height: 224px;
 	padding-bottom: 0px;
-	margin: 0 auto;
+	margin: 0 auto; */
 
 	background-repeat: no-repeat;
 	background-position: center bottom;

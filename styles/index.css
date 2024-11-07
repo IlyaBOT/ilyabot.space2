@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 
 p{
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 300;
 }
 h1{
@@ -124,7 +124,7 @@ body {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: 350;
-  font-size: 24px;
+  font-size: 26px;
   font-style: normal;
 }
 
@@ -408,9 +408,15 @@ ul li a {
 }
 
 .underConstruction {
-  font-size: 1.2em;
+  font-size: 2.2em;
   font-weight: 450;
   text-align: center;
+}
+
+#todoListLabel{
+  font-style: italic;
+  font-size: 32px;
+  font-weight: 300;
 }
 
 #todoList{
