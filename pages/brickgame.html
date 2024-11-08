@@ -1,21 +1,121 @@
-<div id="homeDIV">
-    <div class="innerhome">
-    
-        <h1>
-            BRICK-GAME 9999in1 JS Game
-        </h1>
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>IlyaBOT Space</title>
 
-        <!-- <img id="ball_img" src="../assets/brickgame/img/myBall.png">
-        <img id="paddle_img" src="../assets/brickgame/img/paddle.png">
-        <img id="brick_img" src="../assets/brickgame/img/brick.png"> -->
-        <canvas id="gameScreen" width="100" height="200"></canvas>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/favicon.ico">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/scrollbtn.css">
+        <link rel="stylesheet" href="styles/media.css">
+        <link rel="stylesheet" href="styles/brickgame.css">
 
-        <ul style="padding: 8px; display: flex; justify-content: space-evenly;
-        flex-wrap: nowrap; flex-direction: row;
-        align-content: center; align-items: center;">
-            <button onclick="cookieReadTest()">COOKIE-READ TEST</button>
-            <button onclick="cookieWriteTest()">COOKIE-WRITE TEST</button>
-        </ul>
-        
-        <script type="text/javascript" src="../scripts/brickGame.js"></script>
-</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="../scripts/debug.js"></script>
+        <script type="text/javascript" src="../scripts/soundSystem.js"></script>
+        <script type="text/javascript" src="../scripts/navBtnHandler.js"></script>
+        <script type="text/javascript" src="../scripts/pageHandler.js"></script>
+        <script type="text/javascript" src="../scripts/scrollbtn.js"></script>
+    </head>
+
+    <noscript>
+        <h1 style="margin-bottom: 60px; margin-top: 200px; text-align: center;">This website requires JavaScript to function.</h1>
+        <div style="margin-left: auto; margin-right: 0;width: 60%; display: flex; align-items: center; justify-content: center;"><img src="data/enablejs.png" title="Made by BingAI" style="width: 50%;"></div>
+        <style>
+                #container, .loading {display:none;}
+        </style>
+    </noscript>
+
+    <body>
+        <canvas id="rainCanvas" style="display: block; position: fixed; z-index: 1; top: 0; left: 0;"></canvas>
+        <div id="container">
+            <div id="headerObj"> <!-- Header Logo -->
+                <div class="header rise" style="display: inline;">IlyaBOT.</div>
+                <div class="header headerWord2 rise" style="display: inline;">space</div>
+            </div>
+            <div id="headerArea"> <!-- Header Navbar -->
+                <nav id="navbar" style="margin-bottom: 10px;">
+                    <ul>
+                        <li><a class="navbarBtn" onclick="switchTo(0)">Home</a></li>
+                        <li><a class="navbarBtn" onclick="switchTo(1)">Projects</a></li>
+                        <li><a class="navbarBtn" onclick="switchTo(2)">PhotoBlog</a></li></li>
+                        <li>
+                            <a class="navbarBtn" onclick="goToUrl('https://ibifs.ddns.net')">
+                            FileServer
+                            </a>
+                        </li>
+                        <li>
+                            <a class="navbarBtn" onclick="owoWTF()">OwO?..</a>
+                        </li>
+                        <li>
+                            <!-- Button for toggling debug mode -->
+                            <a class="navbarBtn" id="debug-btn" onclick="toggleDebugMode()">debug</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Main Content-->
+            <div class="container">
+                <div id="flex">
+                    <main id="mainDIV">
+                        <button class="scrollToTopBtn">TOP</button>
+                        <div id="homeDIV">
+                            <div class="innerhome">
+                                <script type="text/javascript" src="../scripts/brickGame.js"></script>
+                            
+                                <h1 class="centered">
+                                    BRICK-GAME 9999in1 JS Game
+                                </h1>
+                        
+                                <!-- <img id="ball_img" src="../assets/brickgame/img/myBall.png">
+                                <img id="paddle_img" src="../assets/brickgame/img/paddle.png">
+                                <img id="brick_img" src="../assets/brickgame/img/brick.png"> -->
+                                <canvas id="gameScreen" class="centered" width="300" height="400"></canvas>
+                        
+                                <ul style="padding: 8px; display: flex; justify-content: space-evenly;
+                                flex-wrap: nowrap; flex-direction: row;
+                                align-content: center; align-items: center;">
+                                    <button onclick="cookieReadTest()">COOKIE-READ TEST</button>
+                                    <button onclick="cookieWriteTest()">COOKIE-WRITE TEST</button>
+                        
+                                    <button onclick="soundSwitch()">Sound</button>
+                                    <button onclick="soundHandler('../assets/brickgame/snd/Click_digitized.mp3')">Play test sound</button>
+                        
+                                    <button onclick="loadGameData()">Load Game Data</button>
+                        
+                                    <button onclick="testFunc()">TEST BUTTON</button>
+                                </ul>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="container">
+                    <div class="wrapper_footer">
+                        <div id="buttonsLeft">
+                            <img id="webbutton" src="./assets/webbuttons/88x31-micro-button.gif">
+                            <img id="webbutton" src="./assets/webbuttons/mY3u0hA.gif">
+                            <img id="webbutton" src="./assets/webbuttons/linux_now.gif">
+                            <img id="webbutton" src="./assets/webbuttons/penguin.gif">
+                        </div>
+                        <div id="footerText">
+                            <h3>2024 © IlyaBOT. Все права защищены.</h3>
+                        </div>
+                        <div id="buttonsRight">
+                            <img id="webbutton" src="./assets/webbuttons/lainchan-button.png">
+                            <img id="webbutton" src="./assets/webbuttons/konata.gif">
+                            <img id="webbutton" src="./assets/webbuttons/reality.gif">
+                            <img id="webbutton" src="./assets/webbuttons/telegram.gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bc1"></div> <!-- Background -->
+        <script type="text/javascript" src="scripts/rain.js"></script>
+    </body>
+</html>

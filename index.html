@@ -8,7 +8,6 @@
         <link rel="icon" href="assets/favicon.ico">
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/index.css">
-        <link rel="stylesheet" href="styles/profile.css">
         <link rel="stylesheet" href="styles/profile2.css">
         <link rel="stylesheet" href="styles/scrollbtn.css">
         <link rel="stylesheet" href="styles/media.css">
@@ -34,6 +33,7 @@
 
     <body>
         <canvas id="rainCanvas" style="display: block; position: fixed; z-index: 1; top: 0; left: 0;"></canvas>
+        
         <div id="container">
             <div id="headerObj"> <!-- Header Logo -->
                 <div class="header rise" style="display: inline;">IlyaBOT.</div>
@@ -46,10 +46,7 @@
                         <li><a class="navbarBtn" onclick="switchTo(1)">Projects</a></li>
                         <li><a class="navbarBtn" onclick="switchTo(2)">PhotoBlog</a></li></li>
                         <li>
-                            <a class="navbarBtn" onclick="goToUrl('https://ibifs.ddns.net')">
-                                <!--<img src="assets/folder-search.png" width="16" height="16">-->
-                            FileServer
-                            </a>
+                            <a class="navbarBtn" onclick="goToUrl('https://ibifs.ddns.net')">FileServer</a>
                         </li>
                         <li>
                             <a class="navbarBtn" onclick="owoWTF()">OwO?..</a>
@@ -80,11 +77,8 @@
                         <div style="display: none;" id="essay2DIV" w3-include-html="pages/essay2.html"></div>
                         <div style="display: none;" id="essay3DIV" w3-include-html="pages/essay3.html"></div>
                         <div style="display: none;" id="jsFormulaDIV" w3-include-html="pages/jsFormula.html"></div>
-                        <div style="display: none;" id="jsGameDIV" w3-include-html="pages/brickgame.html"></div>
                     </main>
-                    
                 </div>
-                
             </div>
             <div id="footer">
                 <div class="container">
@@ -107,13 +101,10 @@
                     </div>
                 </div>
             </div>
-             <!--Footer-->
-            </div>
+        </div>
         
-        
-        
-
         <div class="bc1"></div> <!-- Background -->
+
         <script type="text/javascript" src="scripts/rain.js"></script>
         <script>
             w3IncludeHTML();

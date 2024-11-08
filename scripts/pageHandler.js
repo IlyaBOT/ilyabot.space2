@@ -57,12 +57,6 @@ function switchTo(toI, getTab) {
                 document.getElementById(divTo).style.display = "block";
             }
             break;
-        case 7:
-            var divTo = "jsGameDIV"
-            if (getTab != null && getTab == true){ return divTo } else {
-                document.getElementById(divTo).style.display = "block";
-            }
-            break;
         default:
             var divTo = "Invalid"
             if (getTab != null && getTab == true){ return divTo } else {
