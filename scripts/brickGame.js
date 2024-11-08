@@ -57,24 +57,6 @@ function cookieReadTest(){
     "To use this function, change the DEBUG variable to true in brickgame.js");
   }
 }
-function cookieWriteTest(){
-  if(DEBUG){
-    document.cookie = cookieVarArray[0] + "=" + cookieDataArray[0] + ";";
-    document.cookie = cookieVarArray[1] + "=" + cookieDataArray[1] + ";";
-    document.cookie = cookieVarArray[2] + "=" + cookieDataArray[2] + ";";
-    document.cookie = cookieVarArray[3] + "=" + cookieDataArray[3] + ";";
-    document.cookie = cookieVarArray[4] + "=" + cookieDataArray[4] + ";";
-    document.cookie = cookieVarArray[5] + "=" + cookieDataArray[5] + ";";
-    document.cookie = cookieVarArray[6] + "=" + cookieDataArray[6] + ";";
-    document.cookie = cookieVarArray[7] + "=" + cookieDataArray[7] + ";";
-
-    alert("Test cookie writed!\n" + document.cookie);
-  }
-  else{
-    console.log("[BG] Debug mode is not enabled!\n" +
-    "To use this function, change the DEBUG variable to true in brickgame.js");
-  }
-}
 function testFunc(){
   console.log("TEST: " + cookieVarArray.length + " | " + cookieDataArray.length);
 }

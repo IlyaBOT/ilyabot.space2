@@ -136,12 +136,12 @@
     margin: 0px;
     text-wrap: auto;
     word-break: break-word;
-    font-size: 0.5em;
+    font-size: 1em;
   }
 
-  #todoListLabel{
+  .todoListLabel{
     font-style: italic;
-    font-size: 0.2em;
+    font-size: 0.3em;
     font-weight: 300;
   }
 
