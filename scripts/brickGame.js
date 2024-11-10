@@ -41,25 +41,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const menuBitmap = [
     // "S" (START)
-    [1, 1, 1, 0, 1, 1, 1],
-    [1, 0, 0, 0, 1, 0, 0],
-    [1, 1, 1, 0, 1, 1, 1],
-    [0, 0, 1, 0, 0, 0, 1],
-    [1, 1, 1, 0, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0],
+    [1, 1, 1, 1, 1, 1, 1],
+    [0, 0, 0, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1],
     [],
 
     // "P" (PAUSE)
-    [1, 1, 1, 0, 1, 1, 1],
-    [1, 0, 1, 0, 1, 0, 1],
-    [1, 1, 1, 0, 1, 1, 1],
-    [1, 0, 0, 0, 1, 0, 0],
-    [1, 0, 0, 0, 1, 0, 0],
+    [1, 1, 1, 1, 0, 0, 0],
+    [1, 0, 0, 1, 0, 0, 0],
+    [1, 1, 1, 1, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0],
     [],
 
     // Уровень сложности и прочие надписи можно добавить здесь
 ];
 
   console.log("### BRICK-GAME 9999in1 ###\n" + "[BG] Starting the script!");
+
+  // Проверка на первый запуск
+  if (FIRST_START) {
+    FIRST_START = false;
+    //showMenu();
+  }
 
   function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
@@ -136,27 +142,10 @@ document.addEventListener("DOMContentLoaded", function() {
       if(DEBUG){console.log('[BG] [DEBUG]: Function call error. The "soundPath" argument is missing.');}
     }
   }
-
-  function drawMenu() {
+  function drawGrid() {
     ctx.fillStyle = inactivePixelColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    const startX = 20;
-    let y = 30;
-    menuBitmap.forEach((line) => {
-        let x = startX;
-        line.forEach((pixel) => {
-            ctx.fillStyle = pixel === 1 ? activePixelColor : inactivePixelColor;
-            ctx.fillRect(x, y, cellSize, cellSize);
-            x += cellSize;
-        });
-        y += cellSize;
-    });
-}
-
-  function drawGrid() {
-    gamectx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
-    gamectx.strokeStyle = "#ddd";
+    gamectx.strokeStyle = "#fff";
 
     for (let x = 0; x <= gameCanvas.width; x += cellSize) {
         gamectx.beginPath();
@@ -175,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Функция для отрисовки игрока
   function drawPlayer() {
-    gamectx.fillStyle = "#333";
+    gamectx.fillStyle = activePixelColor;
     gamectx.fillRect(player.x, player.y, player.width, player.height);
   }
 
@@ -183,37 +172,43 @@ document.addEventListener("DOMContentLoaded", function() {
   function handleKeyDown(event) {
     switch (event.code) {
       case "KeyA": // Влево
-          if (player.x > 0) player.x -= cellSize;
+          if (player.x > 0){
+            gamectx.fillStyle = inactivePixelColor;
+            gamectx.fillRect(player.x, player.y, player.width, player.height);
+            player.x -= cellSize;
+          }
           break;
       case "KeyD": // Вправо
-          if (player.x < gameCanvas.width - cellSize) player.x += cellSize;
+          if (player.x < gameCanvas.width - cellSize){
+            gamectx.fillStyle = inactivePixelColor;
+            gamectx.fillRect(player.x, player.y, player.width, player.height);
+            player.x += cellSize;
+          }
           break;
       case "KeyW": // Вверх
-          if (player.y > 0) player.y -= cellSize;
+          if (player.y > 0){
+            gamectx.fillStyle = inactivePixelColor;
+            gamectx.fillRect(player.x, player.y, player.width, player.height);
+            player.y -= cellSize;
+          }
           break;
       case "KeyS": // Вниз
-          if (player.y < gameCanvas.height - cellSize) player.y += cellSize;
+          if (player.y < gameCanvas.height - cellSize){
+            gamectx.fillStyle = inactivePixelColor;
+            gamectx.fillRect(player.x, player.y, player.width, player.height);
+            player.y += cellSize;
+          }
           break;
     }
     draw();
   }
 
-  function showMenu() {
-    drawMenu();
-  }
-
-  // Проверка на первый запуск
-  if (FIRST_START) {
-    FIRST_START = false;
-    showMenu();
-  }
-  
   function draw() {
     drawGrid();
     drawPlayer();
   }
 
-  //window.addEventListener("keydown", handleKeyDown);
+  window.addEventListener("keydown", handleKeyDown);
 
-  //draw();
+  draw();
 });
