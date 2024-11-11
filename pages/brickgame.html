@@ -14,7 +14,7 @@
 
         <script type="text/javascript" src="../scripts/debug.js"></script>
         <script type="text/javascript" src="../scripts/soundSystem.js"></script>
-        <script type="text/javascript" src="../scripts/brickGame.js"></script>
+        <script type="text/javascript" src="../assets/brickgame/brickGame.js"></script>
     </head>
 
     <noscript>
@@ -54,9 +54,7 @@
                 <div id="flex">
                     <main id="mainDIV">
                         <div id="homeDIV">
-                            <div class="innerhome">
-                                
-                            
+                            <div class="innerhome">                            
                                 <h1 class="centered">BRICK-GAME 9999in1 JS Game</h1>
 
                                 <div id="gameCanvas" style="display: flex; justify-content: center; z-index: 1; top: 0; left: 0;">
@@ -67,12 +65,11 @@
                                 flex-wrap: nowrap; flex-direction: row;
                                 align-content: center; align-items: center;">
                                     <button onclick="cookieReadTest()">COOKIE-READ TEST</button>
-                                    <button onclick="cookieWriteTest()">COOKIE-WRITE TEST</button>
-                        
-                                    <button onclick="soundSwitch()">Sound</button>
-                                    <button onclick="soundHandler('../assets/brickgame/snd/Click_digitized.mp3')">Play test sound</button>
-                        
                                     <button onclick="loadGameData()">Load Game Data</button>
+                        
+                                    <button onclick="soundSwitch()">Sound Toggle</button>
+                                    <img id="bg-sound-indicator" src="../assets/brickgame/img/spr_off_gray.png">
+                                    <button onclick="soundHandler('../assets/brickgame/snd/Click_digitized.mp3',0.15)">Play test sound</button>
                         
                                     <button onclick="testFunc()">TEST BUTTON</button>
                                 </ul>

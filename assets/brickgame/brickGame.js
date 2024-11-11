@@ -31,7 +31,7 @@ const inactivePixelColor = "#66704e";
 
 let player = {x: 0,y: 0,width: cellSize,height: cellSize};
 
-// Тут у нас работа с конвасом
+// Работа с canvas
 document.addEventListener("DOMContentLoaded", function() {
   var gameCanvas = document.getElementById("gameScreen");
   var gamectx = gameCanvas.getContext("2d");
@@ -155,13 +155,37 @@ function cookieReadTest(){
     "To use this function, change the DEBUG variable to true in brickgame.js");
   }
 };
+const sound_indicator = document.getElementById("bg-sound-indicator");
+function soundSwitch(){
+  GAME_SOUND = !GAME_SOUND;
+  if(GAME_SOUND==true){
+    sound_indicator.src = "../assets/brickgame/img/spr_on_green.png";
+  }
+  else{
+    sound_indicator.src = "../assets/brickgame/img/spr_off_gray.png";
+  }
+  if(DEBUG){console.log('[BG] DEBUG: Sound state changed to: "' + GAME_SOUND + '".');} return GAME_SOUND;
+}
+function soundHandler(soundPath, soundVolume){
+  if(soundPath!=0 && soundPath!=undefined){
+    if(GAME_SOUND==true){
+      let audio = new Audio(soundPath);
+      if(soundVolume!=0 && soundVolume!=undefined){audio.volume = soundVolume;}
+      audio.play();
 
-function soundSwitch(){GAME_SOUND = !GAME_SOUND; if(DEBUG){console.log('[BG] DEBUG: Sound state changed to: "' + GAME_SOUND + '".');} return GAME_SOUND;}
-
+      if(DEBUG){console.log('[BG] [DEBUG]: Playing sound "' + soundPath + '"...');}
+    }
+    else{
+      if(DEBUG){console.log('[BG] [DEBUG]: Can\'t play sound "' + soundPath + '" because it\'s turned off or undefined (GAME_SOUND=' + GAME_SOUND + ').');}
+    }
+  }
+  else{
+    if(DEBUG){console.log('[BG] [DEBUG]: Function call error. The "soundPath" argument is missing.');}
+  }
+}
 function testFunc(){
   console.log("TEST: " + cookieVarArray.length + " | " + cookieDataArray.length);
 }
-
 function loadGameData(){
 if (getCookie(cookieVarArray[0]) != NaN && getCookie(cookieVarArray[0]) != undefined && getCookie(cookieVarArray[0]) != "undefined") {
   if(DEBUG){console.log("[BG] [DEBUG] Some cookies found! The developer will not starve :D");}
@@ -190,7 +214,6 @@ else{
   }
 }
 }
-
 function getCookie(name) {
   let matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
