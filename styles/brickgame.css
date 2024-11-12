@@ -1,0 +1,14 @@
+#gameCanvas{
+    position: absolute;
+    top: 111px; /* Позиция сверху (пример) */
+    left: 162px; /* Позиция слева (пример) */
+    width: 100px; /* Ширина области экрана */
+    height: 120px; /* Высота области экрана */
+}
+
+#bg-background{
+    display: block;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}

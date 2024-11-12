@@ -25,18 +25,20 @@ let cookieDataArray = ["anon", 0, 1, 1, true, 1, false, true];
 
 const SCREEN_WIDTH = 10; // 10 Pixels width
 const SCREEN_HEIGHT = 20; // 20 Pixels height
-const cellSize = 20;
+const cellSize = 15;
 const activePixelColor = "#242424";
 const inactivePixelColor = "#66704e";
 
 let player = {x: 0,y: 0,width: cellSize,height: cellSize};
 
+const sound_indicator = document.getElementById("bg-sound-indicator"); // ERROR!?
+
 // Работа с canvas
 document.addEventListener("DOMContentLoaded", function() {
   var gameCanvas = document.getElementById("gameScreen");
   var gamectx = gameCanvas.getContext("2d");
-  gameCanvas.width = 200;
-  gameCanvas.height = 400;
+  gameCanvas.width = 150;
+  gameCanvas.height = 300;
   gamectx.fillStyle = "#66704e";
   gamectx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
 
@@ -155,14 +157,13 @@ function cookieReadTest(){
     "To use this function, change the DEBUG variable to true in brickgame.js");
   }
 };
-const sound_indicator = document.getElementById("bg-sound-indicator");
 function soundSwitch(){
   GAME_SOUND = !GAME_SOUND;
   if(GAME_SOUND==true){
-    sound_indicator.src = "../assets/brickgame/img/spr_on_green.png";
+    sound_indicator.src = "../assets/brickgame/img/spr_on_green.png"; // ERROR!
   }
   else{
-    sound_indicator.src = "../assets/brickgame/img/spr_off_gray.png";
+    sound_indicator.src = "../assets/brickgame/img/spr_off_gray.png"; // ERROR!
   }
   if(DEBUG){console.log('[BG] DEBUG: Sound state changed to: "' + GAME_SOUND + '".');} return GAME_SOUND;
 }
