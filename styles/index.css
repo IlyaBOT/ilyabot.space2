@@ -214,7 +214,6 @@ body {
 #navbar ul {
   display: flex;
   padding-bottom: 8px;
-  margin-right: 5px;
   list-style-type: none;
   justify-content: center;
   flex-wrap: wrap;
@@ -329,7 +328,8 @@ body {
   filter: drop-shadow(0 0 1px #d400ff69)
     drop-shadow(0 0 0.5rem #a200ff69)
     drop-shadow(0 0 0.1rem #8400ff9f);
-  margin: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   max-width: 100%;
 }
 
@@ -424,6 +424,15 @@ ul li a {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+#line{
+  margin: 16px 0;
+	padding: 0;
+	height: 1px;
+	border: none;
+	border-top: 2px solid #320032;
+	border-bottom: 2px solid #320032;
+}
+
 .avatarAutoSizeInner {
   position: relative;
   width: 150px; /* Задаем размер для аватара */
@@ -434,6 +443,11 @@ ul li a {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.profile_header .playerAvatar.profile_header_size {
+	float: left;
+	margin-right: 18px;
 }
 
 .frame {
