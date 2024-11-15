@@ -31,16 +31,19 @@ const inactivePixelColor = "#66704e";
 
 let player = {x: 0,y: 0,width: cellSize,height: cellSize};
 
-const sound_indicator = document.getElementById("bg-sound-indicator"); // ERROR!?
-
+ // ERROR!?
+ var sound_indicator = null;
 // Работа с canvas
 document.addEventListener("DOMContentLoaded", function() {
   var gameCanvas = document.getElementById("gameScreen");
   var gamectx = gameCanvas.getContext("2d");
+  sound_indicator = document.getElementById("bg-sound-indicator");
   gameCanvas.width = 150;
   gameCanvas.height = 300;
   gamectx.fillStyle = "#66704e";
   gamectx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+  
+
 
   console.log("### BRICK-GAME 9999in1 ###\n" + "[BG] Starting the script!");
 
@@ -53,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     ctx.fillStyle = inactivePixelColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     gamectx.strokeStyle = "#fff";
+    
 
     for (let x = 0; x <= gameCanvas.width; x += cellSize) {
         gamectx.beginPath();
@@ -74,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
     gamectx.fillStyle = activePixelColor;
     gamectx.fillRect(player.x, player.y, player.width, player.height);
   };
+
 
   // Обработчик клавиш для управления объектом
   function handleKeyDown(event) {
@@ -111,13 +116,17 @@ document.addEventListener("DOMContentLoaded", function() {
   };
 
   function draw() {
+    
     drawGrid();
     drawPlayer();
   }
 
   window.addEventListener("keydown", handleKeyDown);
-
+  
   draw();
+  // resizeCanvas();
+  // window.addEventListener("resize", resizeCanvas);
+  
 });
 
 const menuBitmap = [
