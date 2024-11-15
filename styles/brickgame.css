@@ -1,14 +1,30 @@
 #gameCanvas{
-    position: absolute;
-    top: 111px; /* Позиция сверху (пример) */
-    left: 162px; /* Позиция слева (пример) */
-    width: 100px; /* Ширина области экрана */
-    height: 120px; /* Высота области экрана */
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+    max-height: 300px;
+    margin-top: 119px;
+    right: 35px;
+    z-index: -1;
 }
 
 #bg-background{
-    display: block;
-    width: 100%;
-    height: auto;
+    position: absolute;
+    display: flex;
+    width: 550px;
+    height: 558px;
+}
+
+#brickBar {
+    width: 60px;
+    background-color: #687052;
+}
+
+.gamecontainer{
+    position: relative;
+    display: flex;
     justify-content: center;
+    height: 600px;
 }
