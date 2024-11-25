@@ -30,7 +30,7 @@ let numberColors = [
 ];
 let endscreenContent = {
   win: "<span>✔ Вы выиграли!</span>",
-  loose: "💣 БУМ! Конец игры.",
+  loose: "Конец игры.",
 };
 
 let gameOver = false;

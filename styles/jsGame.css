@@ -3,6 +3,10 @@
 	--boardSize: 0px;
 }		
 #container a {
+    color: #ed64f5;
+    text-decoration: none;
+}
+#container a:hover {
     color: #fff;
     text-decoration: none;
 }
@@ -37,7 +41,7 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin: 10px auto;
-	border: 8px solid #337AB7;
+	border: 8px solid #ed64f5;
 	box-sizing: content-box;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2); 
 }
@@ -86,7 +90,7 @@
     border-radius: 2px;
     font-size: 20px;
     font-weight: bold;
-    color: #fff;
+    color: #ed64f5;
     text-transform: uppercase;
     line-height: 50px;
     transition: all 0.4s;
@@ -95,9 +99,11 @@
     border-radius: 24px;
 	text-decoration: none;
 }
+
 .minesweeper-btn:hover {
     background-color: #7c1f8c;
-    color: #51125c;	
+    color: #ed64f5;
+    text-decoration: none;
 }
 
 .settings fieldset {
@@ -115,14 +121,14 @@
 	font-size: 13px;
 	line-height:18px;
 	transition: .4s all;
-	color:#337AB7;
+	/* color:#ed64f5; */
 	font-weight: bold!important;		
 }
 .settings input[type=radio] + label  {
 	margin: 12px 14px 12px 22px;
 }
 .settings input[type=radio] + label:hover{
-	color:#000;
+	color:#fff;
 }
 .settings input[type=radio] + label:before {
 	position: absolute;
@@ -138,7 +144,7 @@
 	border-radius: 100%;
 }
 .settings input[type=radio]:checked + label:before {
-	background: #337AB7;
+	background: #51125c;
 }		
 @media screen and (max-width: 767px) {
 	.board-wrap {
