@@ -31,8 +31,7 @@ const inactivePixelColor = "#66704e";
 
 let player = {x: 0,y: 0,width: cellSize,height: cellSize};
 
- // ERROR!?
- var sound_indicator = null;
+var sound_indicator = null;
 // Работа с canvas
 document.addEventListener("DOMContentLoaded", function() {
   var gameCanvas = document.getElementById("gameScreen");
@@ -42,8 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
   gameCanvas.height = 300;
   gamectx.fillStyle = "#66704e";
   gamectx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
-  
-
 
   console.log("### BRICK-GAME 9999in1 ###\n" + "[BG] Starting the script!");
 
@@ -51,6 +48,13 @@ document.addEventListener("DOMContentLoaded", function() {
   if (FIRST_START) {
     FIRST_START = false;
     //showMenu();
+
+    if(GAME_SOUND==true){
+      sound_indicator.src = "../assets/brickgame/img/spr_on_green.png"; // ERROR!
+    }
+    else{
+      sound_indicator.src = "../assets/brickgame/img/spr_off_gray.png"; // ERROR!
+    }
   }
   function drawGrid() {
     ctx.fillStyle = inactivePixelColor;
@@ -78,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function() {
     gamectx.fillStyle = activePixelColor;
     gamectx.fillRect(player.x, player.y, player.width, player.height);
   };
-
 
   // Обработчик клавиш для управления объектом
   function handleKeyDown(event) {
