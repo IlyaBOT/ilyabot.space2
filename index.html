@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8" />
-        <title>IlyaBOT Space</title>
+        <title>IlyaBOT Space (lite)</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="assets/favicon.ico">
@@ -12,13 +12,8 @@
         <link rel="stylesheet" href="styles/scrollbtn.css">
         <link rel="stylesheet" href="styles/media.css">
 
-        <script src="https://www.w3schools.com/lib/w3data.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
         <script type="text/javascript" src="scripts/debug.js"></script>
         <script type="text/javascript" src="scripts/soundSystem.js"></script>
-        <script type="text/javascript" src="scripts/navBtnHandler.js"></script>
-        <script type="text/javascript" src="scripts/pageHandler.js"></script>
         <script type="text/javascript" src="scripts/scrollbtn.js"></script>
     </head>
 
@@ -35,24 +30,22 @@
         <div id="container">
             <div id="headerObj"> <!-- Header Logo -->
                 <div class="header rise" style="display: inline;">IlyaBOT.</div>
-                <div class="header headerWord2 rise" style="display: inline;">space</div>
+                <div class="header headerWord2 rise" style="display: inline;">space (lite)</div>
             </div>
             <div id="headerArea"> <!-- Header Navbar -->
                 <nav id="navbar">
                     <ul>
-                        <li><a class="navbarBtn" onclick="switchTo(0)">Home</a></li>
-                        <li><a class="navbarBtn" onclick="switchTo(1)">Projects</a></li>
-                        <li><a class="navbarBtn" onclick="switchTo(2)">PhotoBlog</a></li></li>
+                        <li><a class="navbarBtn" href="index.html">Домой</a></li>
+                        <li><a class="navbarBtn" href="pages.html">Мои работы</a></li>
                         <li>
-                            <a class="navbarBtn" onclick="goToUrl('https://ibifs.ddns.net')">FileServer</a>
+                            <a class="navbarBtn" href="('https://ibifs.ddns.net')">Файловый сервер</a>
                         </li>
                         <li>
-                            <a class="navbarBtn" onclick="owoWTF()">OwO?..</a>
+                            <a class="navbarBtn" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">OwO?..</a>
                         </li>
-                        <li>
-                            <!-- Button for toggling debug mode -->
-                            <a class="navbarBtn" id="debug-btn" onclick="toggleDebugMode()">debug</a>
-                        </li>
+                        <!-- <li>
+                            <a class="navbarBtn" id="debug-btn" onclick="toggleDebugMode()">debug</a> 
+                        </li> --> <!-- Button for toggling debug mode -->
                     </ul>
                 </nav>
             </div>
@@ -65,23 +58,83 @@
                             <div class="innerhome">
                                 <h1 class="centered">Добро пожаловать!</h1><br>
                                 
-                                <div w3-include-html="aboutMe.html"></div> 
+                                <div class="profile_header_bg">
+                                    <div class="profile_header_bg_texture">
+                                      <div class="profile_header">
+                                        <div class="profile_header_content">
+                                          <div class="playerAvatar profile_header_size online">
+                                            <div class="avatarAutoSizeInner">
+                                                <div class="profile_avatar_frame">
+                                                    <img class="frame" src="https://cdn.fastly.steamstatic.com/steamcommunity/public/images/items/1098340/e306ba3afd82926bfd35e5b5dc2757cbc766d7d1.png">
+                                                    <img class="avatar" src="https://avatars.fastly.steamstatic.com/ff5938430fec12e854e77edff6f593b5b3422935_full.jpg">
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                
+                                <p style="text-indent: 25px;">
+                                  Добро пожаловать на мой веб-сайт. Сами Вы на него попали, или его открыли за Вас, надеюсь что Вам здесь понравится!
+                                </p>  
+                                <p style="text-indent: 25px;">
+                                  Меня зовут Илья. Я Донецкий технарь-айтишник, копающийся в горе радиодеталей
+                                  и компьютерном железе, а так же не отказывающий себе в программировании. Пытаюсь худо-бедно в медийку,
+                                  снимаю видео на <a href="https://www.youtube.com/@ilyabot" style="display:inline;
+                                  text-decoration: none;">ютубчик</a> и стримлю на <a href="https://www.twitch.tv/ilya_boot"
+                                  style="display:inline; text-decoration: none;">твиче</a>.
+                                  <br>На данный момент <i>(25.11.2024)</i> являюсь студентом первокурсником в
+                                  <a style="display:inline; text-decoration: none;" href="https://donntu.ru/">Донецком Национальном Техническом Университете</a>, учусь
+                                  на <a style="display:inline; text-decoration: none;" href="https://donntu.ru/fisp" style="display:inline; text-decoration: none;"
+                                  Факультете интеллектуальных систем и программирования</a> на
+                                  <a style="display:inline; text-decoration: none;" href="https://donntu.ru/fisp/ki">Кафедре компьютерной инженерии</a>.
+                                  <br><br>
+                                </p>
+                                <p style="text-indent: 25px;">В свободное время отдыхаю в видеоиграх, в основном это 
+                                  <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/440/Team_Fortress_2/">TeamFortress 2</a>, 
+                                  но список всех игр слишком
+                                  большой что бы перечислить здесь хотя бы половину, поэтому выделю только основных фаворитов: Все 
+                                  игры Valve (<a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/220/HalfLife_2/">Half-Life 2</a>, 
+                                  <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/400/Portal/">Portal</a>/<a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/620/Portal_2/">Portal 2</a>, 
+                                  etc.), 
+                                  <a style="display:inline; text-decoration: none;" href="https://www.minecraft.net/">Minecraft</a>, 
+                                  <a style="display:inline; text-decoration: none;" href="https://www.old-games.ru/game/716.html">Unreal Tournament 1999</a>, <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/2200/Quake_III_Arena/">Quake 3</a>, <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/504230/Celeste/">Celeste</a>, 
+                                  <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/548430/Deep_Rock_Galactic/">Deep Rock Galactic</a>, 
+                                  <a style="display:inline; text-decoration: none;" href="https://www.old-games.ru/game/7491.html">Need for Speed: Underground</a>, (<a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/2280/DOOM__DOOM_II/">DOOM + DOOM II</a> и <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/782330/DOOM_Eternal/">Eternal</a>), 
+                                  <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/">Euro Truck Simulator 2</a>, 
+                                  <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/323190/Frostpunk/">Frostpunk</a>,
+                                  <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/">Witcher 3</a>, 
+                                  <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/235460/METAL_GEAR_RISING_REVENGEANCE/">Metalgear Rising</a>, 
+                                  <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/601150/Devil_May_Cry_5/">Devil May Cry 5</a>, 
+                                  <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/526870/Satisfactory/">Satisfactory</a>, 
+                                  <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/427520/Factorio/">Factorio</a> 
+                                  и ещё многое-многое другое...<br>
+                                </p>                                
+                                <p style="text-indent: 25px;">Коллекционирую и реставрирую ретро-компьютеры и прочую старую технику. Слушаю рок и металл <i>(а так
+                                  же их поджанры)</i>, но вообще я меломан и слушаю всё кроме <i>"кальянного-рэпа"</i>, <i>"русской попсы"</i> и шансона. Из
+                                  любимых групп тяжело выделить что-то особенно любимое, но наверное особым фаворитом всё же была, есть и будет - <b>Stigmata</b>.
+                                </p>
+                                <p style="text-indent: 25px;">Из остальных могу упомянуть: <b>Nightwish</b>, <b>Powerwolf</b>, <b>Король и Шут</b>, <b>OST DOOM</b>, <b>OST Devil May Cry 5</b>, <b>OST Metalgear Rising</b>,
+                                  <b>Kitsune^2</b>, <b>AC/DC</b>, <b>Nirvana</b>, <b>Linkin Park</b>, <b>S3RL</b>, <b>Rammstein</b>, <b>Sabaton</b>, <b>Skillet</b>, и другие.
+                                </p>
+                                
                                 <div id="line"></div>
                                 
-                                <h2 class="centered" style="padding-bottom: 24px;">Мой путь от дома до школы*</h3>
+                                <h2 class="centered" style="padding-bottom: 24px;">Мой путь от дома до университета*</h3>
                                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8ea10a6b68d12945cadf6b75aa366c3e3bfe774e6aefe028f691da559796a2af&amp;width=100%25&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>
                                 
                                 <div id="line"></div>
-                                <div w3-include-html="todoList.html"></div> 
+                                <p class="underConstruction">Warning! Website is still under construction! :<</p>
+                                
+                                <p class="todoListLabel">ToDo List:</p>
+                                <ul class="todoList" style="padding: 8px;">
+                                    <li id="todoList">- Add a JS formula. <i>(In progress...)</i></li>
+                                    <li id="todoList">- Add a JS mini game. <i>(In progress...)</i></li>
+                                    <li id="todoList">- Fix “button.style.textShadow” on line 21 of the debug.js script.</li>
+                                </ul>
                             </div>
                         </div>
-                        <div style="display: none;" id="projectsDIV" w3-include-html="pages.html"></div>
-                        <div style="display: none;" id="photoBlogDIV" w3-include-html="404.html"></div>
-
-                        <div style="display: none;" id="essay1DIV" w3-include-html="pages/essay1.html"></div>
-                        <div style="display: none;" id="essay2DIV" w3-include-html="pages/essay2.html"></div>
-                        <div style="display: none;" id="essay3DIV" w3-include-html="pages/essay3.html"></div>
-                        <div style="display: none;" id="jsFormulaDIV" w3-include-html="pages/jsFormula.html"></div>
                     </main>
                 </div>
             </div>
