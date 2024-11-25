@@ -11,9 +11,11 @@
         <link rel="stylesheet" href="../styles/index.css">
         <link rel="stylesheet" href="../styles/scrollbtn.css">
         <link rel="stylesheet" href="../styles/media.css">
+        <link rel="stylesheet" href="../styles/jsFormula.css">
 
         <script type="text/javascript" src="../scripts/debug.js"></script>
         <script type="text/javascript" src="../scripts/scrollbtn.js"></script>
+        <script type="text/javascript" src="../scripts/jsFormula.js"></script>
     </head>
 
     <noscript>
@@ -42,9 +44,9 @@
                         <li>
                             <a class="navbarBtn" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">OwO?..</a>
                         </li>
-                        <!-- <li>
+                        <li>
                             <a class="navbarBtn" id="debug-btn" onclick="toggleDebugMode()">debug</a> 
-                        </li> --> <!-- Button for toggling debug mode -->
+                        </li> <!-- Button for toggling debug mode -->
                     </ul>
                 </nav>
             </div>
@@ -56,8 +58,21 @@
                         <div id="homeDIV">
                             <div class="innerhome">
                                 <h1 class="centered">JavaScript-формула</h1>
-                                <h3 class="centered">Пока-что здесь только пустота. Возвращайтесь позднее!</h3>
                                 <br>
+                                <h2 class="centered">
+                                    <input class="input-textbox" id="text-field-a" type="text" placeholder="A">
+                                    x2 + 
+                                    <input class="input-textbox" id="text-field-b" type="text" placeholder="B">
+                                    x + 
+                                    <input class="input-textbox" id="text-field-c" type="text" placeholder="C">
+                                     = 0
+                                </h2><br>
+                                <div class="centered">
+                                    <a onclick="solveEquation()" class="jsformula-btn">Let's Make some magic!</a> 
+                                </div>
+                                <div class="centered">
+                                    <h2 >Результат:</h2><div id="result" class="centered result"></div>
+                                </div>
                             </div>
                         </div>
                     </main>

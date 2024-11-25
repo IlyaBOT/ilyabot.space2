@@ -1,0 +1,30 @@
+.input-textbox {
+    text-align: center;
+    width: 1.65em;
+    height: 32px;
+    padding-top: 8px;
+    font-size: 1em;
+}
+
+#container .jsformula-btn {
+    user-select: none;
+    display: inline-block;
+    padding: 0 40px;
+    text-align: center;
+    background-color: #51125c;
+    font-weight: bold;
+    color: #ed64f5;
+    line-height: 50px;
+    transition: all 0.4s;
+    outline: none !important;
+    border: none;
+    border-radius: 24px;
+    text-decoration: none;
+}
+
+#container .jsformula-btn:hover {
+    user-select: none;
+    background-color: #7c1f8c;
+    color: #fff;
+    text-decoration: none;
+}

@@ -174,4 +174,13 @@
     font-size: 18px;
     font-weight: 400;
   }
+
+  .input-textbox{
+    text-align: center;
+    width: 1.25em;
+    height: 24px;
+    padding-top: 8px;
+    font-size: 0.85em;
+    font-weight: bold;
+  }
 }
