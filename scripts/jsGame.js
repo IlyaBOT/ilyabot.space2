@@ -4,7 +4,9 @@ let size = 10;
 let bombFrequency = 0.2;
 let tileSize = 50;
 
-const board = document.querySelectorAll(".board")[0];
+document.addEventListener('DOMContentLoaded', () => { 
+
+  const board = document.querySelectorAll(".board")[0];
 let tiles;
 let boardSize;
 
@@ -267,3 +269,7 @@ difficultyBtns.forEach((btn) => {
     clear();
   });
 });
+
+  
+});
+
