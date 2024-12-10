@@ -31,8 +31,8 @@ let numberColors = [
   "#7f8c8d",
 ];
 let endscreenContent = {
-  win: "<span>✔ Вы выиграли!</span>",
-  loose: "Конец игры.",
+  win: "<span>Поздравляем, Вы выиграли!</span>",
+  loose: "Вы проиграли",
 };
 
 let gameOver = false;
@@ -208,7 +208,6 @@ const checkTile = (tile, coordinate) => {
 
 /* Конец игры - взрыв */
 const endGame = (tile) => {
-  console.log("💣 Booom! Game over.");
   endscreen.innerHTML = endscreenContent.loose;
   endscreen.classList.add("show");
   gameOver = true;
