@@ -3,39 +3,21 @@
     <head>
         <meta charset="utf-8" />
         <title>IlyaBOT Space (lite)</title>
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="assets/favicon.ico">
-
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/index.css">
-        <link rel="stylesheet" href="styles/scrollbtn.css">
-        <link rel="stylesheet" href="styles/media.css">
-
-        <script type="text/javascript" src="scripts/debug.js"></script>
-        <script type="text/javascript" src="scripts/scrollbtn.js"></script>
+        <link rel="icon" href="../assets/favicon.ico">
+        <link rel="stylesheet" href="../styles/reset.css">
+        <link rel="stylesheet" href="wap.css">
     </head>
-
-    <noscript>
-        <h1 style="margin-bottom: 60px; margin-top: 200px; text-align: center;">This website requires JavaScript to function.<br>Please, enable JavaScript in your browser settings.</h1>
-        <style>
-                #container, .loading {display:none;}
-        </style>
-    </noscript>
-
     <body>
-        <canvas id="rainCanvas" style="display: block; position: fixed; z-index: 1; top: 0; left: 0;"></canvas>
-        
         <div id="container">
             <div id="headerObj"> <!-- Header Logo -->
-                <div class="header rise" style="display: inline;">IlyaBOT.</div>
-                <div class="header headerWord2 rise" style="display: inline;">space (lite)</div>
+                <div class="header">IlyaBOT.space (EDGE)</div>
             </div>
             <div id="headerArea"> <!-- Header Navbar -->
                 <nav id="navbar">
                     <ul>
                         <li><a class="navbarBtn" href="index.html">Домой</a></li>
-                        <li><a class="navbarBtn" href="pages.html">Мои работы</a></li>
+                        <li><a class="navbarBtn" href="../pages.html">Мои работы</a></li>
                         <li>
                             <a class="navbarBtn" href="https://ibifs.ddns.net">Файловый сервер</a>
                         </li>
@@ -52,43 +34,25 @@
             <div class="container">
                 <div id="flex">
                     <main id="mainDIV">
-                        <button class="scrollToTopBtn" id="scrollToTopBtn"></button>
                         <div id="homeDIV">
                             <div class="innerhome">
                                 <h1 class="centered">Добро пожаловать!</h1><br>
-                                
-                                <div class="profile_header_bg">
-                                    <div class="profile_header_bg_texture">
-                                      <div class="profile_header">
-                                        <div class="profile_header_content">
-                                          <div class="playerAvatar profile_header_size online">
-                                            <div class="avatarAutoSizeInner">
-                                                <div class="profile_avatar_frame">
-                                                    <img class="frame" src="assets/avatar-border.png">
-                                                    <img class="avatar" src="assets/IB_avatar8.3.jpg">
-                                                </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                </div>
                                 
                                 <p style="text-indent: 25px;">
                                   Добро пожаловать на мой веб-сайт. Сами Вы на него попали, или его открыли за Вас, надеюсь что Вам здесь понравится!
                                 </p>  
                                 <p style="text-indent: 25px;">
-                                    Меня зовут Илья. Я Донецкий технарь-айтишник, копающийся в горе радиодеталей
-                                    и компьютерном железе, а так же не отказывающий себе в программировании. Пытаюсь худо-бедно в медийку,
-                                    снимаю видео на <a href="https://www.youtube.com/@ilyabot" style="display:inline;
-                                    text-decoration: none;">ютубчик</a> и стримлю на <a href="https://www.twitch.tv/ilya_boot"
-                                    style="display:inline; text-decoration: none;">твиче</a>.
-                                    <br>На данный момент <i>(25.11.2024)</i> являюсь студентом первокурсником в
-                                    <a style="display:inline; text-decoration: none;" href="https://donntu.ru/">Донецком Национальном Техническом Университете</a>, учусь на
-                                    <a style="display:inline; text-decoration: none;" href="https://donntu.ru/fisp/ki">Кафедре компьютерной инженерии</a> на
-                                    <a style="display:inline; text-decoration: none;" href="https://donntu.ru/fisp" style="display:inline; text-decoration: none;">
-                                        Факультете интеллектуальных систем и программирования</a>.
-                                    <br><br>
+                                  Меня зовут Илья. Я Донецкий технарь-айтишник, копающийся в горе радиодеталей
+                                  и компьютерном железе, а так же не отказывающий себе в программировании. Пытаюсь худо-бедно в медийку,
+                                  снимаю видео на <a href="https://www.youtube.com/@ilyabot" style="display:inline;
+                                  text-decoration: none;">ютубчик</a> и стримлю на <a href="https://www.twitch.tv/ilya_boot"
+                                  style="display:inline; text-decoration: none;">твиче</a>.
+                                  <br>На данный момент <i>(25.11.2024)</i> являюсь студентом первокурсником в
+                                  <a style="display:inline; text-decoration: none;" href="https://donntu.ru/">Донецком Национальном Техническом Университете</a>, учусь
+                                  на <a style="display:inline; text-decoration: none;" href="https://donntu.ru/fisp" style="display:inline; text-decoration: none;"
+                                  Факультете интеллектуальных систем и программирования</a> на
+                                  <a style="display:inline; text-decoration: none;" href="https://donntu.ru/fisp/ki">Кафедре компьютерной инженерии</a>.
+                                  <br><br>
                                 </p>
                                 <p style="text-indent: 25px;">В свободное время отдыхаю в видеоиграх, в основном это 
                                   <a style="display:inline; text-decoration: none;" href="https://store.steampowered.com/app/440/Team_Fortress_2/">TeamFortress 2</a>, 
@@ -117,19 +81,6 @@
                                 <p style="text-indent: 25px;">Из остальных могу упомянуть: <b>Nightwish</b>, <b>Powerwolf</b>, <b>Король и Шут</b>, <b>OST DOOM</b>, <b>OST Devil May Cry 5</b>, <b>OST Metalgear Rising</b>,
                                   <b>Kitsune^2</b>, <b>AC/DC</b>, <b>Nirvana</b>, <b>Linkin Park</b>, <b>S3RL</b>, <b>Rammstein</b>, <b>Sabaton</b>, <b>Skillet</b>, и другие.
                                 </p>
-                                
-                                <div id="line"></div>
-                                
-                                <h2 class="centered" style="padding-bottom: 24px;">Мой путь от дома до университета*</h3>
-                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8ea10a6b68d12945cadf6b75aa366c3e3bfe774e6aefe028f691da559796a2af&amp;width=100%25&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>
-                                
-                                <!-- <div id="line"></div> -->
-                                <!-- <p class="underConstruction">Warning! Website is still under construction! :<</p> -->
-                                
-                                <!-- <p class="todoListLabel">ToDo List:</p>
-                                <ul class="todoList" style="padding: 8px;">
-                                    <li id="todoList">- Fix “button.style.textShadow” on line 21 of the debug.js script.</li>
-                                </ul> -->
                             </div>
                         </div>
                     </main>
@@ -138,52 +89,12 @@
             <div id="footer">
                 <div class="container">
                     <div class="wrapper_footer">
-                        <div id="buttonsLeft">
-                            <div id="webbuttondiv">
-                                <img id="webbutton" src="./assets/webbuttons/konata.gif">    
-                            </div>
-                            <div id="webbuttondiv">
-                                <img id="webbutton" src="./assets/webbuttons/reality.gif"> 
-                            </div>
-                            <div id="webbuttondiv">
-                                <img id="webbutton" src="./assets/webbuttons/insanity.gif">
-                            </div>
-                            <div id="webbuttondiv">
-                                <img id="webbutton" src="./assets/webbuttons/penguin.gif">
-                            </div>
-                        </div>
                         <div id="footerText">
                             <h3>2024 © IlyaBOT. Все права защищены.</h3>
-                        </div>
-                        <div id="buttonsRight">
-                            <div id="webbuttondiv">
-                                <a href="https://lainchan.org/">
-                                    <img id="webbutton" src="./assets/webbuttons/lainchan-button.png">
-                                </a>
-                            </div>
-                            <div id="webbuttondiv">
-                                <a href="https://www.debian.org/">
-                                    <img id="webbutton" src="./assets/webbuttons/powered-by-debian.gif">
-                                </a>
-                            </div>
-                            <div id="webbuttondiv">
-                                <a href="https://youtu.be/sBEdptmboDY">
-                                    <img id="webbutton" src="./assets/webbuttons/imissxp.gif"> 
-                                </a>
-                            </div>
-                            <div id="webbuttondiv">
-                                <a href="https://t.me/ibworkshop">
-                                    <img id="webbutton" src="./assets/webbuttons/telegram.gif">
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="bc1"></div> <!-- Background -->
-
-        <script type="text/javascript" src="scripts/rain.js"></script>
     </body>
 </html>
